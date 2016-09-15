@@ -1,11 +1,19 @@
 Package: miscgis
 Type: Package
-Title: What the Package Does (Title Case)
+Title: A Collection of Functions and RStudio Add-ins for GIS Analysis in R
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Tiernan Martin
+Maintainer: Tiernan Martin <tiernan.martin@gmail.com>
+Description: This package holds a number of helper functions and RStudio Add-ins
+    that are useful during exploratory GIS analysis.
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 5.0.1
+Depends:
+    R (>= 3.0.0)
+Imports:
+    leaflet (>= 1.0.1),
+    dplyr (>= 0.5.0),
+    sp (>= 1.2-3),
+    tigris (>= 0.3.3)
