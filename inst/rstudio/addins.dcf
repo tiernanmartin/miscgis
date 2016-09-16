@@ -1,0 +1,47 @@
+Name: Insert MakeDfObj() Template
+Description: Insert a template for loading/processing ACS data
+Binding: insertMakeDfObjectAddin
+
+Name: Insert MakeACSObj() Template
+Description: Insert a template for loading/processing ACS data
+Binding: insertMakeACSObjectAddin
+
+Name: Insert MakeObj() Template
+Description: Insert a template for loading/processing data
+Binding: insertMakeObjTemplate
+Interactive: true
+
+Name: Insert MakeShp() Template
+Description: Insert a template for creating/editing spatial data
+Binding: insertMakeShpObjectAddin
+Interactive: true
+
+Name: Insert YCC Ind. Template
+Description: Insert a template for YCC indicators
+Binding: insertYCCindTemplate
+Interactive: true
+
+Name: Insert YCC Map Template
+Description: Insert a template for YCC maps
+Binding: insertYCCmapTemplate
+Interactive: true
+
+Name: Insert Shiny Dash Template
+Description: Insert a template for a Shiny Dashboard app
+Binding: insertShinyDashTemplate
+Interactive: false
+
+Name: Insert ZIP Download Template
+Description: Insert a template for downloading a ZIP file
+Binding: insertZIPDownloadTemplate
+Interactive: false
+
+Name: Insert Sea to YCC Template
+Description: Insert a template for subsetting Seattle demographic data to YCC
+Binding: insertSEAtoYCCTemplate
+Interactive: false
+
+Name: Insert ACS to Seattle Template
+Description: Insert a template for loading ACS tract data for Seattle
+Binding: insertACStoSEATemplate
+Interactive: false

@@ -16,4 +16,6 @@ Imports:
     leaflet (>= 1.0.1),
     dplyr (>= 0.5.0),
     sp (>= 1.2-3),
-    tigris (>= 0.3.3)
+    tigris (>= 0.3.3),
+    miniUI (>= 0.1.1),
+    shinydashboard (>= 0.5.2)
