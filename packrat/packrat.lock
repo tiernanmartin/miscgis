@@ -93,6 +93,12 @@ Version: 0.7
 Hash: f60506850a2d752dff69fc2a31c5a339
 Requires: htmltools, jsonlite, yaml
 
+Package: httpuv
+Source: CRAN
+Version: 1.3.3
+Hash: 12c4ec43e5609293576e368c740c1f84
+Requires: Rcpp
+
 Package: httr
 Source: CRAN
 Version: 1.2.1
@@ -148,6 +154,12 @@ Package: mime
 Source: CRAN
 Version: 0.5
 Hash: 463550cf44fb6f0a2359368f42eebe62
+
+Package: miniUI
+Source: CRAN
+Version: 0.1.1
+Hash: e85626581f80b1fe6c92a96ec348efc5
+Requires: htmltools, shiny
 
 Package: munsell
 Source: CRAN
@@ -216,6 +228,24 @@ Version: 0.4.0
 Hash: c4a91e7a322e03813b68b73940ce031f
 Requires: RColorBrewer, Rcpp, dichromat, labeling, munsell, plyr
 
+Package: shiny
+Source: CRAN
+Version: 0.14
+Hash: 695d82a6a0bc88b7fe693c968450f9ca
+Requires: R6, digest, htmltools, httpuv, jsonlite, mime, sourcetools,
+    xtable
+
+Package: shinydashboard
+Source: CRAN
+Version: 0.5.2
+Hash: 93bf1db29d6103dda1833e0668186a32
+Requires: htmltools, shiny
+
+Package: sourcetools
+Source: CRAN
+Version: 0.1.5
+Hash: 04ddeb1c288302222562326a471e2945
+
 Package: sp
 Source: CRAN
 Version: 1.2-3
@@ -259,6 +289,11 @@ Package: withr
 Source: CRAN
 Version: 1.0.2
 Hash: 774eb7be9087cdc24b53b74e5359cfac
+
+Package: xtable
+Source: CRAN
+Version: 1.8-2
+Hash: 7293235cfcc14cdff1ce7fd1a0212031
 
 Package: yaml
 Source: CRAN
