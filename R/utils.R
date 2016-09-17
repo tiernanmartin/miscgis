@@ -26,6 +26,9 @@ mk_proj_dir <- function(){
 
         lapply(comms,dir.create,showWarnings = FALSE,recursive = TRUE)
 
+        rm(inputs)
+        rm(comms)
+
         return(NULL)
 }
 
