@@ -2,8 +2,18 @@
 #'
 #' General purpose functions to make working in R easier.
 #'
+#' @import dplyr
 #' @name utils
 #' @export
+
+cbind_fill <- function(...){
+        nm <- list(...)
+        nm <- lapply(nm, as.matrix)
+        n <- max(sapply(nm, nrow))
+        do.call(cbind, lapply(nm, function (x)
+                rbind(x, matrix(, n-nrow(x), ncol(x))))) %>% as.data.frame()
+}
+
 
 mk_proj_dir <- function(){
         inputs <- paste0("./1_inputs/",
@@ -25,6 +35,8 @@ mk_proj_dir <- function(){
                         ))
 
         lapply(comms,dir.create,showWarnings = FALSE,recursive = TRUE)
+
+        dir.create(path = "./vault")
 
         rm(inputs)
         rm(comms)
