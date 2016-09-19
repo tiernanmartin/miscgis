@@ -121,11 +121,15 @@ Version: 0.2.0
 Hash: 3d6e7608e65bbf5cb170dab1e3c9ed8b
 
 Package: leaflet
-Source: CRAN
-Version: 1.0.1
-Hash: 749ac8c776a57c686ab8c90b5a6818fb
+Source: github
+Version: 1.0.2.9000
+Hash: 4fbb8998ab076e1f9580e8ffd4ae7b97
 Requires: RColorBrewer, base64enc, htmltools, htmlwidgets, magrittr,
     markdown, png, raster, scales, sp
+GithubRepo: leaflet
+GithubUsername: rstudio
+GithubRef: master
+GithubSha1: 4370acec91addbf5a54099c09a278cc47590de17
 
 Package: magrittr
 Source: CRAN

@@ -4,7 +4,12 @@
 \alias{myLfltGrey}
 \title{A subtle grayscale leaflet basemap}
 \usage{
-myLfltGrey()
+myLfltGrey(labels = TRUE, controls = TRUE)
+}
+\arguments{
+\item{labels}{Include OSM labels (styled by CartoDB) above all other layers (including paths).}
+
+\item{controls}{Show leaflet control elements (e.g., zoom buttons, attribution, etc.)}
 }
 \description{
 A subtle grayscale leaflet basemap to begin a leaflet pipechain with.
