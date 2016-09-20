@@ -8,32 +8,13 @@
 #' @import leaflet
 #' @export
 
-myLfltGrey <- function(labels = TRUE, controls = TRUE){
 
-        setup <- ifelse(labels|controls,
-                        "var myMap = this;",
-                        NULL)
-
-        lbl <- ifelse(labels,
-                      "var shadowPane = myMap.getPanes().shadowPane;
-                shadowPane.appendChild(
-                myMap.layerManager._byLayerId['tile\\nlabels_layer'].getContainer());",
-                      NULL
-        )
-
-        cntrl <- ifelse(controls,
-                        NULL,
-                        "myMap.removeControl(myMap.attributionControl);
-                                      myMap.removeControl(myMap.zoomControl);")
-
-        jqry <- paste0(
-                "function(el, t){",
-                setup,lbl,cntrl,"}"
-        )
-
+myLfltGrey <- function(){
         leaflet() %>%
                 addProviderTiles(providers$CartoDB.PositronNoLabels) %>%
                 addProviderTiles(providers$CartoDB.PositronOnlyLabels,
-                                 layerId = 'labels_layer' ) %>%
-                htmlwidgets::onRender(jqry)
+                                 layerId = 'labels_layer' )
+
 }
+
+

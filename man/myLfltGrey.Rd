@@ -4,7 +4,7 @@
 \alias{myLfltGrey}
 \title{A subtle grayscale leaflet basemap}
 \usage{
-myLfltGrey(labels = TRUE, controls = TRUE)
+myLfltGrey()
 }
 \arguments{
 \item{labels}{Include OSM labels (styled by CartoDB) above all other layers (including paths).}
