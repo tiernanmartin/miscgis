@@ -76,10 +76,27 @@ Version: 0.5.0
 Hash: 03e5e71801c0f49217922e2cd4680f06
 Requires: BH, DBI, R6, Rcpp, assertthat, lazyeval, magrittr, tibble
 
+Package: ggplot2
+Source: CRAN
+Version: 2.1.0
+Hash: 50e297b0191179c39c7dcae0eff72b51
+Requires: digest, gtable, plyr, reshape2, scales
+
+Package: ggthemes
+Source: CRAN
+Version: 3.2.0
+Hash: 44ef6d3a43f207cea8003ed2d69c9c36
+Requires: assertthat, colorspace, ggplot2, scales
+
 Package: git2r
 Source: CRAN
 Version: 0.15.0
 Hash: 92d5a9f3cba5e146b92a76dabbc29fbb
+
+Package: gtable
+Source: CRAN
+Version: 0.2.0
+Hash: cd78381a9d3fea966ac39bd0daaf5554
 
 Package: htmltools
 Source: CRAN
@@ -202,6 +219,12 @@ Source: CRAN
 Version: 2.5-8
 Hash: 99156195f8997007a98360092edea08e
 Requires: Rcpp, sp
+
+Package: reshape2
+Source: CRAN
+Version: 1.4.1
+Hash: c9a8d2349fe969cf519dd0ced9cc1414
+Requires: Rcpp, plyr, stringr
 
 Package: rgdal
 Source: CRAN

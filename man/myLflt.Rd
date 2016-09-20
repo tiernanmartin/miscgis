@@ -3,9 +3,6 @@
 \name{myLflt}
 \alias{myLflt}
 \title{A pleasant leaflet basemap}
-\usage{
-myLflt()
-}
 \description{
 A pleasant-looking leaflet basemap to begin a leaflet pipechain with.
 }

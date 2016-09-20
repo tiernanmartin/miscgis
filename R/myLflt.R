@@ -6,9 +6,12 @@
 #' in a PDF document - use \code{myLflyGrey} instead.
 #'
 #' @name myLflt
-#' @import leaflet
+#' @import leaflet ggthemes
 #' @export
+NULL
 
+#` @rdname myLflt
+#` @export
 myLflt <- function(){
         leaflet() %>%
                 addTiles(
@@ -16,3 +19,10 @@ myLflt <- function(){
                         attribution = 'Maps by <a href="http://www.mapbox.com/">Mapbox</a>'
                 )
 }
+
+#` @rdname myLflt
+#` @export
+mapPalCat <- ggthemes_data$tableau$colors$tableau20[!grepl("light",names(ggthemes_data$tableau$colors$tableau20))]
+
+
+
