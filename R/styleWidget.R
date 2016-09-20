@@ -11,8 +11,6 @@
 #' @import htmlwidgets htmltools
 #' @export
 
-
-
 styleWidget <- function(hw=NULL, style="", addl_selector="") {
         stopifnot(!is.null(hw), inherits(hw, "htmlwidget"))
 

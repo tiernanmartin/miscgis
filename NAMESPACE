@@ -2,6 +2,7 @@
 
 export(cbind_fill)
 export(crs_proj)
+export(crs_wspn)
 export(insertMakeShpObjectAddin)
 export(myLflt)
 export(myLfltGrey)

@@ -4,10 +4,13 @@
 \name{crs}
 \alias{crs}
 \alias{crs_proj}
+\alias{crs_wspn}
 \title{Coordinate reference systems}
 \format{An object of class \code{CRS} of length 1.}
 \usage{
 crs_proj
+
+crs_wspn
 }
 \description{
 A set of coordinate reference systems.
