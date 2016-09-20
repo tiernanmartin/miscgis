@@ -20,9 +20,4 @@ myLflt <- function(){
                 )
 }
 
-#` @rdname myLflt
-#` @export
-mapPalCat <- ggthemes_data$tableau$colors$tableau20[!grepl("light",names(ggthemes_data$tableau$colors$tableau20))]
-
-
 
