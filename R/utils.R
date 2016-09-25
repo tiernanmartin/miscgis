@@ -16,33 +16,18 @@ cbind_fill <- function(...){
 
 
 mk_proj_dir <- function(){
-        inputs <- paste0("./1_inputs/",
-                         c("1_raw",
-                           "2_intermediate",
-                           "3_tidy"))
-        lapply(inputs,dir.create,showWarnings = FALSE,recursive = TRUE)
-
-        dir.create(path = "./2_analysis")
-
-        comms <- paste0("./3_communication/",
-                        c("html",
-                          "images",
-                          "msword",
-                          "other",
-                          "pdf",
-                          "shiny",
-                          "sp"
-                        ))
-
-        lapply(comms,dir.create,showWarnings = FALSE,recursive = TRUE)
-
-        dir.create(path = "./vault")
-
-        rm(inputs)
-        rm(comms)
-
+        inputs <- paste0("./1-data/", c("1-notebooks",
+                                        "2-raw",
+                                        "3-external",
+                                        "4-interim",
+                                        "5-tidy"))
+        lapply(inputs, dir.create, showWarnings = FALSE, recursive = TRUE)
+        dir.create(path = "./2-analysis")
+        comms <- paste0("./3-communication/", c("1-bookdown", "2-shinyapps","other"))
+        lapply(comms, dir.create, showWarnings = FALSE, recursive = TRUE)
         return(NULL)
 }
+
 
 injectHighlightHandler <- function() {
 
