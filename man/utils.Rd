@@ -2,10 +2,13 @@
 % Please edit documentation in R/utils.R
 \name{utils}
 \alias{cbind_fill}
+\alias{mk_proj_dir}
 \alias{utils}
 \title{A set of generic helpful functions}
 \usage{
 cbind_fill(...)
+
+mk_proj_dir()
 }
 \description{
 General purpose functions to make working in R easier.

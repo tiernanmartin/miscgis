@@ -4,8 +4,10 @@
 #'
 #' @import dplyr
 #' @name utils
-#' @export
+NULL
 
+#' @rdname utils
+#' @export
 cbind_fill <- function(...){
         nm <- list(...)
         nm <- lapply(nm, as.matrix)
@@ -14,7 +16,8 @@ cbind_fill <- function(...){
                 rbind(x, matrix(, n-nrow(x), ncol(x))))) %>% as.data.frame()
 }
 
-
+#' @rdname utils
+#' @export
 mk_proj_dir <- function(){
         inputs <- paste0("./1-data/", c("1-notebooks",
                                         "2-raw",
