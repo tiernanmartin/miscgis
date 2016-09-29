@@ -22,6 +22,7 @@ mk_proj_dir <- function(){
         inputs <- paste0("./1-data/", c("1-notebooks",
                                         "2-raw",
                                         "3-external",
+                                        "3-external/manual",
                                         "4-interim",
                                         "5-tidy"))
         lapply(inputs, dir.create, showWarnings = FALSE, recursive = TRUE)
