@@ -29,7 +29,7 @@ mk_proj_dir <- function(){
         dir.create(path = "./2-analysis")
         comms <- paste0("./3-communication/", c("1-bookdown", "2-shinyapps","other"))
         lapply(comms, dir.create, showWarnings = FALSE, recursive = TRUE)
-        dir.create(path = "./scripts")
+        dir.create(path = "./proj-setup-scripts")
         return(NULL)
 }
 
