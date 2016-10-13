@@ -3,9 +3,12 @@
 \name{utils}
 \alias{cbind_fill}
 \alias{mk_proj_dir}
+\alias{subset_duplicated}
 \alias{utils}
 \title{A set of generic helpful functions}
 \usage{
+subset_duplicated(x, nm)
+
 cbind_fill(...)
 
 mk_proj_dir()
