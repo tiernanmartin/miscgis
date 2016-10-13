@@ -7,7 +7,7 @@
 \alias{utils}
 \title{A set of generic helpful functions}
 \usage{
-subset_duplicated(x, nm)
+subset_duplicated(x, nm, notin = FALSE)
 
 cbind_fill(...)
 

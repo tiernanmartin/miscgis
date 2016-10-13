@@ -2,15 +2,20 @@
 #'
 #' General purpose functions to make working in R easier.
 #'
-#' @import dplyr
+#' @import dplyr operator.tools
 #' @name utils
 NULL
 
 #' @rdname utils
 #' @export
-subset_duplicated <- function(x,nm){
-        subset(x, x[[nm]] %in% x[[nm]][duplicated(x[[nm]])])
-}
+subset_duplicated <- function(x,nm,notin = FALSE){
+        if(notin){
+                subset(x, x[[nm]] %!in% x[[nm]][duplicated(x[[nm]])])
+        }else{
+                subset(x, x[[nm]] %in% x[[nm]][duplicated(x[[nm]])])
+        }
+        }
+
 
 #' @rdname utils
 #' @export
