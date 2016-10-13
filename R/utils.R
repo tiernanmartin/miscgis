@@ -8,6 +8,12 @@ NULL
 
 #' @rdname utils
 #' @export
+subset_duplicated <- function(x,nm){
+        subset(x, x[[nm]] %in% x[[nm]][duplicated(x[[nm]])])
+}
+
+#' @rdname utils
+#' @export
 cbind_fill <- function(...){
         nm <- list(...)
         nm <- lapply(nm, as.matrix)
