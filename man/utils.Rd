@@ -2,6 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{utils}
 \alias{cbind_fill}
+\alias{is_pct}
 \alias{mk_proj_dir}
 \alias{subset_duplicated}
 \alias{utils}
@@ -12,6 +13,8 @@ subset_duplicated(x, nm, notin = FALSE)
 cbind_fill(...)
 
 mk_proj_dir()
+
+is_pct(x)
 }
 \description{
 General purpose functions to make working in R easier.

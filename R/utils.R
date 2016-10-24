@@ -24,7 +24,7 @@ cbind_fill <- function(...){
         nm <- lapply(nm, as.matrix)
         n <- max(sapply(nm, nrow))
         do.call(cbind, lapply(nm, function (x)
-                rbind(x, matrix(, n-nrow(x), ncol(x))))) %>% as.data.frame()
+                rbind(x, matrix(n-nrow(x), ncol(x))))) %>% as.data.frame()
 }
 
 #' @rdname utils
@@ -43,6 +43,10 @@ mk_proj_dir <- function(){
         dir.create(path = "./proj-setup-scripts")
         return(NULL)
 }
+
+#' @rdname utils
+#' @export
+is_pct <- function(x){if(max(x,na.rm = TRUE)<=1 & min(x, na.rm = TRUE) >=0){TRUE}else{FALSE}}
 
 
 injectHighlightHandler <- function() {
