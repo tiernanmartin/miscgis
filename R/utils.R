@@ -46,7 +46,9 @@ mk_proj_dir <- function(){
 
 #' @rdname utils
 #' @export
-is_pct <- function(x){if(max(x,na.rm = TRUE)<=1 & min(x, na.rm = TRUE) >=0){TRUE}else{FALSE}}
+is_pct <- function(x){
+        if(!is.double(x)){FALSE}else if(max(x,na.rm = TRUE)<=1 & min(x, na.rm = TRUE) >=0){TRUE}else{FALSE}
+        }
 
 
 injectHighlightHandler <- function() {
