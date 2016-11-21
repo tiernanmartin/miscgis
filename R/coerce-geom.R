@@ -46,37 +46,38 @@ coerce_from_geometrycollection <- function(x, crs = NULL){
 #' @export
 coerce_to_geom <- function(x, FUN,crs = NULL){
 
+        is_sf <- any(class(x) == 'sf')
+
+        if(!is_sf){
+                stop("Not an sf object")
+        }
         crs <- {
-                if(is.null(crs)){
+                if (is.null(crs)) {
                         st_crs(x)
-                }else{
+                }
+                else {
                         crs
                 }
         }
-
-        geom <-  FUN() %>% st_sfc()
-
-        coerce_ <- function(x){
-
-                is_list <- st_geometry(x)[[i]] %>% summary %>% .[1,3]
-
-                if(is_list == 'list'){
+        geom <- FUN() %>% st_sfc()
+        coerce_ <- function(x) {
+                is_list <- st_geometry(x)[[i]] %>% summary %>% .[1, 3]
+                if (is_list == "list") {
                         st_geometry(x)[[i]] %>% FUN()
-                }else{
+                }
+                else {
                         st_geometry(x)[[i]] %>% list %>% FUN()
                 }
-
         }
-
-
-        for(i in 1:nrow(x)){geom[[i]] <- coerce_(x)}
-
-        new_sf <-
-                x %>%
-                select(-matches('geom')) %>%
+        for (i in 1:nrow(x)) {
+                geom[[i]] <- coerce_(x)
+        }
+        new_sf <- x %>%
+                select(-matches("geom")) %>%
                 mutate(geometry = geom) %>%
+                st_as_sf() %>%
                 st_set_crs(crs)
-        # st_crs(x) <- crs
-        return(x)
+
+        return(new_sf)
 
 }
