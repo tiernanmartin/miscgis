@@ -71,8 +71,12 @@ coerce_to_geom <- function(x, FUN,crs = NULL){
 
         for(i in 1:nrow(x)){geom[[i]] <- coerce_(x)}
 
-        x$geom <- geom
-        st_crs(x) <- crs
+        new_sf <-
+                x %>%
+                select(-matches('geom')) %>%
+                mutate(geometry = geom) %>%
+                st_set_crs(crs)
+        # st_crs(x) <- crs
         return(x)
 
 }
