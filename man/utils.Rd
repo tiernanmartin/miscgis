@@ -2,12 +2,18 @@
 % Please edit documentation in R/utils.R
 \name{utils}
 \alias{cbind_fill}
+\alias{first_not_na}
 \alias{is_pct}
 \alias{mk_proj_dir}
+\alias{replace_empty}
 \alias{subset_duplicated}
 \alias{utils}
 \title{A set of generic helpful functions}
 \usage{
+first_not_na(x)
+
+replace_empty(x)
+
 subset_duplicated(x, nm, notin = FALSE)
 
 cbind_fill(...)

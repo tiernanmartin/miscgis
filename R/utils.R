@@ -8,6 +8,20 @@ NULL
 
 #' @rdname utils
 #' @export
+first_not_na <- function(x){
+
+        x[!is.na(x)][1]
+
+}
+
+#' @rdname utils
+#' @export
+replace_empty <- function(x){
+        ifelse(nchar(x)==0,NA,x)
+}
+
+#' @rdname utils
+#' @export
 subset_duplicated <- function(x,nm,notin = FALSE){
         if(notin){
                 subset(x, x[[nm]] %!in% x[[nm]][duplicated(x[[nm]])])
