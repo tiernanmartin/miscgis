@@ -4,14 +4,21 @@
 \alias{myLfltOpts}
 \title{Options for styling a leaflet map}
 \usage{
-myLfltOpts(map, bumpLabels = TRUE, hideControls = TRUE)
+myLfltOpts(map, tileLabels = TRUE, fullScreenBtn = TRUE,
+  bumpTileLabels = TRUE, hideControls = TRUE)
 }
 \arguments{
-\item{bumpLabels}{Include OSM labels (styled by CartoDB) above all other layers (including paths).}
+\item{map}{The map to add the tile layer to.}
 
-\item{hideControls}{Show leaflet control elements (e.g., zoom buttons, attribution, etc.)}
+\item{tileLabels}{If \code{tileLabels} is \code{TRUE}, a tile layer of OSM labels (styled by CartoDB) will be added.}
+
+\item{fullScreenBtn}{If \code{fullScreenBtn} is \code{TRUE}, a fullscreen control button will be added.}
+
+\item{bumpTileLabels}{If \code{bumpTileLabels} is \code{TRUE}, the OSM labels will sit above all other map layers.}
+
+\item{hideControls}{If \code{hideControls} is \code{TRUE}, control elements will be hidden.}
 }
 \description{
-A set of style options to be applied to a leaflet htmlwidget using a JS script.
+A set of frequently-used leaflet map options.
 }
 

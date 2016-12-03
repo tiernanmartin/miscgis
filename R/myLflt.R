@@ -16,7 +16,7 @@ myLflt <- function(){
         leaflet() %>%
                 addTiles(
                         urlTemplate = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
-                        attribution = 'Maps by <a href="http://www.mapbox.com/">Mapbox</a>'
+                        attribution = ''
                 )
 }
 

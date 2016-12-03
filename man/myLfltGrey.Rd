@@ -4,14 +4,10 @@
 \alias{myLfltGrey}
 \title{A subtle grayscale leaflet basemap}
 \usage{
-myLfltGrey(data = NULL, bumpLabels = TRUE, hideControls = TRUE)
+myLfltGrey(data = NULL)
 }
 \arguments{
 \item{data}{A data object (currently supported objects are matrices, data frames, and spatial objects from the sp package of classes)}
-
-\item{bumpLabels}{Include OSM labels (styled by CartoDB) above all other layers (including paths).}
-
-\item{hideControls}{Show leaflet control elements (e.g., zoom buttons, attribution, etc.)}
 }
 \description{
 A subtle grayscale leaflet basemap to begin a leaflet pipechain with.
