@@ -27,7 +27,7 @@ myLfltOpts <- function(map, tileLabels = TRUE, fullScreenBtn = TRUE, bumpTileLab
 
         # JS strings
 
-        lbl <- if(bumpLabels == TRUE){"var shadowPane = myMap.getPanes().shadowPane;shadowPane.style.pointerEvents = 'none';shadowPane.appendChild(myMap.layerManager._byLayerId['tile\\nlabels_layer'].getContainer());"}else{""}
+        lbl <- if(bumpTileLabels == TRUE){"var shadowPane = myMap.getPanes().shadowPane;shadowPane.style.pointerEvents = 'none';shadowPane.appendChild(myMap.layerManager._byLayerId['tile\\nlabels_layer'].getContainer());"}else{""}
 
         cntrl <- if(hideControls == TRUE){"myMap.removeControl(myMap.attributionControl);myMap.removeControl(myMap.zoomControl);"}else{""}
 
