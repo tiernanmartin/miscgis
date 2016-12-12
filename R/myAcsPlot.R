@@ -13,7 +13,7 @@
 myAcsPlot <- function(acs,sort_fun,col = 1,ylab,.pct = TRUE){
         par(mar = c(1,4,1,1))
 
-        acs_obj <- acsOrder(acs,FUN = sort_fun,sort_col = col,result_col = col)
+        acs_obj <- acsOrder(acs,FUN = sort_fun,order_col = col,result_col = col)
 
         acs.colnames(acs_obj) <- col
 
