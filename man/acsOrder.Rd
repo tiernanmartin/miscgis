@@ -11,7 +11,9 @@ acsOrder(acs, FUN = acs::standard.error, col = 1)
 
 \item{FUN}{A function for extracting information from an \code{acs} object (e.g. \code{estimate}, \code{standard.error})}
 
-\item{col}{The column to display, as a numeric index or as a character string}
+\item{order_col}{The column to order by}
+
+\item{result_col}{The column to display, as a numeric index or as a character string}
 }
 \description{
 A convenience function for ordering acs objects
