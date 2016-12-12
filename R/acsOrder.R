@@ -9,4 +9,4 @@
 #' @import acs
 #' @export
 
-acsOrder <- function(acs,FUN = acs::standard.error,col = 1){acs[order(FUN(acs[,order_col])),result_col]}
+acsOrder <- function(acs,FUN = acs::standard.error,order_col = 1,result_col = 1){acs[order(FUN(acs[,order_col])),result_col]}
