@@ -4,6 +4,8 @@
 \alias{cbind_fill}
 \alias{first_not_na}
 \alias{is_pct}
+\alias{label_pct}
+\alias{label_yr}
 \alias{mk_proj_dir}
 \alias{replace_empty}
 \alias{subset_duplicated}
@@ -21,6 +23,10 @@ cbind_fill(...)
 mk_proj_dir()
 
 is_pct(x)
+
+label_pct(breaks)
+
+label_yr(breaks)
 }
 \description{
 General purpose functions to make working in R easier.
