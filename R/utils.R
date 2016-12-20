@@ -30,7 +30,6 @@ subset_duplicated <- function(x,nm,notin = FALSE){
         }
         }
 
-
 #' @rdname utils
 #' @export
 cbind_fill <- function(...){
@@ -83,6 +82,7 @@ label_yr <- function(breaks){
         b_final <- c(b_min,b_others)
         return(b_final)
 }
+
 injectHighlightHandler <- function() {
 
         code <- "
