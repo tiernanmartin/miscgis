@@ -33,11 +33,11 @@ subset_duplicated <- function(x,nm,notin = FALSE){
 #' @rdname utils
 #' @export
 cbind_fill <- function(...){
-        nm <- list(...)
+        nm <- c(...)
+        if(!is.list(nm)){nm <- list(...)}
         nm <- lapply(nm, as.matrix)
         n <- max(sapply(nm, nrow))
-        do.call(cbind, lapply(nm, function (x)
-                rbind(x, matrix(nrow = n-nrow(x), ncol = ncol(x))))) %>% as.data.frame()
+        do.call(cbind, lapply(nm, function(x) rbind(x, matrix(nrow = n - nrow(x), ncol = ncol(x))))) %>% as.data.frame()
 }
 
 #' @rdname utils
