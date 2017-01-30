@@ -16,6 +16,12 @@ first_not_na <- function(x){
 
 #' @rdname utils
 #' @export
+first_not_null <- function(x){
+        x[!sapply(x,is.null)][1]
+}
+
+#' @rdname utils
+#' @export
 replace_empty <- function(x){
         ifelse(nchar(x)==0,NA,x)
 }
@@ -43,16 +49,25 @@ cbind_fill <- function(...){
 #' @rdname utils
 #' @export
 mk_proj_dir <- function(){
-        inputs <- paste0("./1-data/", c("1-notebooks",
-                                        "2-raw",
-                                        "3-external",
-                                        "3-external/manual",
-                                        "4-interim",
-                                        "5-tidy"))
+        inputs <- paste0("./1-data/", c("1-raw",
+                                        "2-external",
+                                        "2-external/manual",
+                                        "3-interim",
+                                        "4-ready"))
         lapply(inputs, dir.create, showWarnings = FALSE, recursive = TRUE)
-        dir.create(path = "./2-analysis")
-        comms <- paste0("./3-communication/", c("1-bookdown", "2-shinyapps","other"))
+        comms <- paste0("./2-communication/", c("1-rnotebooks",
+                                                "1-rnotebooks/archive",
+                                                "1-rnotebooks/tmp",
+                                                "2-bookdown",
+                                                "3-rmarkdown",
+                                                "4-shinyapps",
+                                                "others",
+                                                "others/images",
+                                                "others/msword",
+                                                "others/pdf",
+                                                "others/spatial"))
         lapply(comms, dir.create, showWarnings = FALSE, recursive = TRUE)
+        dir.create(path = "./3-resources")
         dir.create(path = "./proj-setup-scripts")
         return(NULL)
 }

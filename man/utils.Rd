@@ -3,6 +3,7 @@
 \name{utils}
 \alias{cbind_fill}
 \alias{first_not_na}
+\alias{first_not_null}
 \alias{is_pct}
 \alias{label_pct}
 \alias{label_yr}
@@ -13,6 +14,8 @@
 \title{A set of generic helpful functions}
 \usage{
 first_not_na(x)
+
+first_not_null(x)
 
 replace_empty(x)
 
