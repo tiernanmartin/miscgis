@@ -19,4 +19,3 @@ Prepends a string of CSS styles to an HTML widget
 \details{
 Source: http://widgets1092.rssing.com/browser.php?indx=61900561&last=1&item=19
 }
-

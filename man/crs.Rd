@@ -16,4 +16,3 @@ crs_wspn
 A set of coordinate reference systems.
 }
 \keyword{datasets}
-

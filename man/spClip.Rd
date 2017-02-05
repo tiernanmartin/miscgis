@@ -9,4 +9,3 @@ spClip(orig, sp)
 \description{
 \code{sp_clip} converts a SpatialPolygons object into a SpatialPolygonsDataFrames.
 }
-

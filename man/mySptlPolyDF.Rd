@@ -9,4 +9,3 @@ mySptlPolyDF(sp)
 \description{
 \code{mySptlPolyDF} converts a SpatialPolygons object into a SpatialPolygonsDataFrames.
 }
-

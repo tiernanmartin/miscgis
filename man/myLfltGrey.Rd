@@ -12,4 +12,3 @@ myLfltGrey(data = NULL)
 \description{
 A subtle grayscale leaflet basemap to begin a leaflet pipechain with.
 }
-

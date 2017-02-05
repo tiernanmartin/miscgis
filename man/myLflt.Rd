@@ -10,4 +10,3 @@ A pleasant-looking leaflet basemap to begin a leaflet pipechain with.
 Note: because this uses tiles from a Mapbox URL, this function will not work correctly
 in a PDF document - use \code{myLflyGrey} instead.
 }
-

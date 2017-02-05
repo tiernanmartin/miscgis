@@ -21,4 +21,3 @@ myLfltOpts(map, tileLabels = TRUE, fullScreenBtn = TRUE,
 \description{
 A set of frequently-used leaflet map options.
 }
-

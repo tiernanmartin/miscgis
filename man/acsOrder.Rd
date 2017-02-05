@@ -18,4 +18,3 @@ acsOrder(acs, FUN = acs::standard.error, order_col = 1, result_col = 1)
 \description{
 A convenience function for ordering acs objects
 }
-

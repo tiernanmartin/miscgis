@@ -8,4 +8,3 @@
 \description{
 A collection of \R functions and RStudio Addins for GIS analysis.
 }
-

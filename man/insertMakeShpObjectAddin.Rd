@@ -9,4 +9,3 @@ insertMakeShpObjectAddin()
 \description{
 An add-in that inserts the code to build and/or load a spatial object in R.
 }
-

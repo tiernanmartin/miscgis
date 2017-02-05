@@ -20,4 +20,3 @@ myAcsPlot(acs, sort_fun, col = 1, ylab, .pct = TRUE)
 \description{
 An ordered dotplot with error bars and labels
 }
-

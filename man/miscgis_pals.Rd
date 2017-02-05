@@ -12,4 +12,3 @@ miscgis_pals
 A set of color palettes.
 }
 \keyword{datasets}
-
