@@ -11,12 +11,12 @@
 #' @import leaflet leaflet.extras htmlwidgets
 #' @export
 
-myLfltOpts <- function(map, tileLabels = TRUE, fullScreenBtn = TRUE, bumpTileLabels = TRUE, hideControls = TRUE){
+myLfltOpts <- function(map, tileLabels = TRUE, fullScreenBtn = TRUE, bumpTileLabels = TRUE, hideControls = TRUE, pseudoFullscreen = TRUE){
 
         # Arguments to pass to the chain
 
         fs <- if(fullScreenBtn){
-                function(x)addFullscreenControl(x)
+                function(x)addFullscreenControl(x, pseudoFullscreen = pseudoFullscreen)
         }else{function(x)x}
 
         tileLbl <- if(tileLabels){

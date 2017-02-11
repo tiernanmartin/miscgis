@@ -5,7 +5,7 @@
 \title{Options for styling a leaflet map}
 \usage{
 myLfltOpts(map, tileLabels = TRUE, fullScreenBtn = TRUE,
-  bumpTileLabels = TRUE, hideControls = TRUE)
+  bumpTileLabels = TRUE, hideControls = TRUE, pseudoFullscreen = TRUE)
 }
 \arguments{
 \item{map}{The map to add the tile layer to.}
