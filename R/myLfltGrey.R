@@ -8,9 +8,9 @@
 #' @export
 
 
-myLfltGrey <- function(data = NULL){
+myLfltGrey <- function(data = NULL, width = NULL, length = NULL){
 
-        leaflet(data) %>%
+        leaflet(data, width = width, length = length) %>%
                 addProviderTiles(providers$CartoDB.PositronNoLabels)
 
 }
