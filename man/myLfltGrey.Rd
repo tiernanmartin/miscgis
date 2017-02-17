@@ -4,7 +4,7 @@
 \alias{myLfltGrey}
 \title{A subtle grayscale leaflet basemap}
 \usage{
-myLfltGrey(data = NULL, width = NULL, length = NULL)
+myLfltGrey(data = NULL, width = NULL, height = NULL)
 }
 \arguments{
 \item{data}{A data object (currently supported objects are matrices, data frames, and spatial objects from the sp package of classes)}
