@@ -9,15 +9,23 @@ NULL
 #' @rdname utils
 #' @export
 first_not_na <- function(x){
+        if(all(sapply(x,is.na))){
+                NA
+                }else{
+                x[!sapply(x,is.na)][1]
+        }
 
-        x[!is.na(x)][1]
 
 }
 
 #' @rdname utils
 #' @export
 first_not_null <- function(x){
-        x[!sapply(x,is.null)][1]
+        if(all(sapply(x,is.null))){
+                NA
+        }else{
+                x[!sapply(x,is.null)][1]
+        }
 }
 
 #' @rdname utils
