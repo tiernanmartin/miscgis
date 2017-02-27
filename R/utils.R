@@ -10,7 +10,7 @@ NULL
 #' @export
 first_not_na <- function(x){
         if(all(sapply(x,is.na))){
-                NA
+                as(NA,class(x))
                 }else{
                 x[!sapply(x,is.na)][1]
         }
@@ -22,7 +22,7 @@ first_not_na <- function(x){
 #' @export
 first_not_null <- function(x){
         if(all(sapply(x,is.null))){
-                NA
+                as(NA,class(x))
         }else{
                 x[!sapply(x,is.null)][1]
         }
