@@ -7,11 +7,12 @@
 #' @param write_fun a function to write the object into a temporary file
 #' @param .zip A logical scalar, do you want to compress the file into a `.zip` file?
 #' @param .share A logical scalar, do you want to share the file?
+#' @param folder A `dribble` object indicating the Drive folder to upload the file to.
 #'
 #' @return `dribble` object
 #' @export
 
-drive_upload_obj <- function(x, filename, write_fun, .zip = FALSE, .share = TRUE){
+drive_upload_obj <- function(x, filename, write_fun, .zip = FALSE, .share = TRUE, folder = NULL){
 
   tempdir <- tempdir()
 
@@ -27,9 +28,12 @@ drive_upload_obj <- function(x, filename, write_fun, .zip = FALSE, .share = TRUE
     zip(dest_file_zip, dest_file_orig)
 
     dribble <- drive_upload(from = dest_file_zip,
-                            name = paste0(f,".zip"))
+                            name = paste0(f,".zip"),
+                            folder = folder)
   }else{
-    dribble <- drive_upload(from = dest_file_orig,name = filename)
+    dribble <- drive_upload(from = dest_file_orig,
+                            name = filename,
+                            folder = folder)
   }
 
   if(.share){drive_share(dribble, role = "commenter",type = "anyone")}

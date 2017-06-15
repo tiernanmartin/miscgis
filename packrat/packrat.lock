@@ -182,12 +182,12 @@ GithubSha1: 2983e0a1c5d1f9e656b874004456c4bfe9cf1a25
 Package: googledrive
 Source: github
 Version: 0.0.0.9000
-Hash: a695d5fdb5f75de06d09898ecf448603
+Hash: 463c0535fcad2f6ff672e162d14c2cf4
 Requires: glue, httr, jsonlite, purrr, tibble
 GithubRepo: googledrive
 GithubUsername: tidyverse
 GithubRef: master
-GithubSha1: 28ab658275f910059b7215f5f3ee209b2439fb1a
+GithubSha1: 8e217ba9c17bf0a338234ac415ada860f2e35978
 
 Package: gridExtra
 Source: CRAN
