@@ -57,6 +57,9 @@ cbind_fill <- function(...){
 #' @rdname utils
 #' @export
 mk_proj_dir <- function(){
+
+
+
         # Create directories
 
         inputs <- paste0("./1-data/", c("1-raw",

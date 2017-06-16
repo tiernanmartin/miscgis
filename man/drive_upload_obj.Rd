@@ -4,7 +4,8 @@
 \alias{drive_upload_obj}
 \title{Upload a object in the Working Environment to Google Drive.}
 \usage{
-drive_upload_obj(x, filename, write_fun, .zip = FALSE, .share = TRUE)
+drive_upload_obj(x, filename, write_fun, .zip = FALSE, .share = TRUE,
+  folder = NULL)
 }
 \arguments{
 \item{x}{an object in the working environment.}
@@ -17,6 +18,8 @@ should appear on Google Drive.}
 \item{.zip}{A logical scalar, do you want to compress the file into a `.zip` file?}
 
 \item{.share}{A logical scalar, do you want to share the file?}
+
+\item{folder}{A `dribble` object indicating the Drive folder to upload the file to.}
 }
 \value{
 `dribble` object
