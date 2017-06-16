@@ -4,7 +4,7 @@
 \alias{drive_read}
 \title{Read a file from Google Drive.}
 \usage{
-drive_read(dribble, read_fun, .unzip = FALSE)
+drive_read(dribble, read_fun, .unzip = FALSE, ...)
 }
 \arguments{
 \item{dribble}{a `dribble` object containing the googledrive information.}
@@ -12,6 +12,8 @@ drive_read(dribble, read_fun, .unzip = FALSE)
 \item{read_fun}{a function to read the object into memory.}
 
 \item{.unzip}{A logical scalar, does the file need to be decompressed?}
+
+\item{...}{Arguments to pass to the `read_fun` function.}
 }
 \value{
 an object, format depends on which `read_fun` is provided.

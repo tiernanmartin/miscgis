@@ -4,11 +4,12 @@
 #' @param dribble a `dribble` object containing the googledrive information.
 #' @param read_fun a function to read the object into memory.
 #' @param .unzip A logical scalar, does the file need to be decompressed?
+#' @param ... Arguments to pass to the `read_fun` function.
 #'
 #' @return an object, format depends on which `read_fun` is provided.
 #' @export
 
-drive_read <- function(dribble, read_fun, .unzip = FALSE){
+drive_read <- function(dribble, read_fun, .unzip = FALSE, ...){
 
         # Download the file
 
@@ -38,6 +39,6 @@ drive_read <- function(dribble, read_fun, .unzip = FALSE){
         }
 
         # Read the file
-        read_fun(fp)
+        read_fun(fp,...)
 
 }
