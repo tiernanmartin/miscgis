@@ -372,10 +372,14 @@ Hash: 9d4b62cad4b931e1726cb0b0a9bc55fe
 Requires: mnormt
 
 Package: purrr
-Source: CRAN
-Version: 0.2.2.2
-Hash: faada139260184912fea03f3fea13842
-Requires: Rcpp, lazyeval, magrittr, tibble
+Source: github
+Version: 0.2.2.9000
+Hash: e9d0190c6f7f2855d1376e2c0e3ab285
+Requires: magrittr, rlang, tibble
+GithubRepo: purrr
+GithubUsername: tidyverse
+GithubRef: master
+GithubSha1: 30610141fcb9e1255bf0f58e747e7f323bdfb3c0
 
 Package: rappdirs
 Source: CRAN

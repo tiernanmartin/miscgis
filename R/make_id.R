@@ -13,12 +13,12 @@ make_id <- function(rn, string = LETTERS, .shuffle = FALSE){
         # browser()
         times <- plyr::round_any(log(rn,length(string)),1,ceiling)
 
-        res <- map_chr(.x = purrr::cross_n(rep(list(string),times)),
+        res <- map_chr(.x = purrr::cross(rep(list(string),times)),
                        .f = ~ paste(rev(.x), collapse = ""))
 
-        return(res[1:rn])
-
         if(.shuffle) return(res[sample(rn,replace = FALSE)])
+
+        return(res[1:rn])
 
 }
 
