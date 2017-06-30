@@ -10,8 +10,8 @@ Hash: 14dfb3e8ffe20996118306ff4de1fab2
 
 Package: DBI
 Source: CRAN
-Version: 0.5-1
-Hash: 375869004db963f9915f2b8a49b4a718
+Version: 0.7
+Hash: 1ab72df487f06ad5f0de05446cdd4bd6
 
 Package: R6
 Source: CRAN
@@ -59,6 +59,17 @@ Package: base64enc
 Source: CRAN
 Version: 0.1-3
 Hash: c590d29e555926af053055e23ee79efb
+
+Package: bindr
+Source: CRAN
+Version: 0.1
+Hash: e3a02070cf705d3ad1c5af1635a515a3
+
+Package: bindrcpp
+Source: CRAN
+Version: 0.2
+Hash: f5f300f6180e097c7ce174ef3c6307a6
+Requires: Rcpp, bindr, plogr
 
 Package: bitops
 Source: CRAN
@@ -137,9 +148,10 @@ Hash: e53fb8c58673df868183697e39a6a4d6
 
 Package: dplyr
 Source: CRAN
-Version: 0.5.0
-Hash: 09fc57f582c74ffa20a57e0a48b27150
-Requires: BH, DBI, R6, Rcpp, assertthat, lazyeval, magrittr, tibble
+Version: 0.7.1
+Hash: 160bc6cc8d861967782cd3fa86287615
+Requires: BH, R6, Rcpp, assertthat, bindrcpp, glue, magrittr,
+    pkgconfig, plogr, rlang, tibble
 
 Package: evaluate
 Source: CRAN
@@ -354,6 +366,16 @@ Source: CRAN
 Version: 0.4.8-1
 Hash: 6ad605ba7b4b476d84be6632393f5765
 
+Package: pkgconfig
+Source: CRAN
+Version: 2.0.1
+Hash: 0dda4a2654a22b36a715c2b0b6fbacac
+
+Package: plogr
+Source: CRAN
+Version: 0.1-1
+Hash: fb19215402e2d9f1c7f803dcaa806fc2
+
 Package: plyr
 Source: CRAN
 Version: 1.8.4
@@ -472,13 +494,13 @@ Requires: stringr
 
 Package: sf
 Source: github
-Version: 0.3-1
-Hash: 345a7700d4b45a80492c2f788003fbae
-Requires: DBI, Rcpp, units
+Version: 0.5-2
+Hash: 7a07a1f069aef9d130e08794fe3867f5
+Requires: DBI, Rcpp, magrittr, units
 GithubRepo: sfr
 GithubUsername: edzer
 GithubRef: master
-GithubSha1: 4a172f76de673afadc406f734936581a5521288a
+GithubSha1: 66f0e02add3c1a67610f7e37a0934c682a95c414
 
 Package: shiny
 Source: CRAN
@@ -548,8 +570,8 @@ Hash: 587587ec23c49271e0657fed726e7846
 
 Package: units
 Source: CRAN
-Version: 0.4-2
-Hash: 51cbd36b597c3a8d54c88783a1bc1411
+Version: 0.4-5
+Hash: cb587d8c731ea9d8de0879b9454a77e2
 Requires: udunits2
 
 Package: uuid
