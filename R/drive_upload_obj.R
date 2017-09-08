@@ -5,8 +5,8 @@
 #' @param filename Character, name of the file (including appropriate extension) that
 #'   should appear on Google Drive.
 #' @param write_fun a function to write the object into a temporary file
-#' @param .zip A logical scalar, do you want to compress the file into a `.zip` file?
-#' @param .share A logical scalar, do you want to share the file?
+#' @param .zip logical, do you want to compress the file into a `.zip` file?
+#' @param .share logical, do you want to share the file?
 #' @param folder A `dribble` object indicating the Drive folder to upload the file to.
 #'
 #' @return `dribble` object
@@ -27,13 +27,13 @@ drive_upload_obj <- function(x, filename, write_fun, .zip = FALSE, .share = TRUE
 
     zip(dest_file_zip, dest_file_orig)
 
-    dribble <- drive_upload(from = dest_file_zip,
-                            name = paste0(f,".zip"),
-                            folder = folder)
+    dribble <- drive_upload(media = dest_file_zip,
+                            path = folder,
+                            name = paste0(f,".zip"))
   }else{
-    dribble <- drive_upload(from = dest_file_orig,
-                            name = filename,
-                            folder = folder)
+    dribble <- drive_upload(media = dest_file_orig,
+                            path = folder,
+                            name = filename)
   }
 
   if(.share){drive_share(dribble, role = "commenter",type = "anyone")}

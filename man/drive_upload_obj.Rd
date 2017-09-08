@@ -15,9 +15,9 @@ should appear on Google Drive.}
 
 \item{write_fun}{a function to write the object into a temporary file}
 
-\item{.zip}{A logical scalar, do you want to compress the file into a `.zip` file?}
+\item{.zip}{logical, do you want to compress the file into a `.zip` file?}
 
-\item{.share}{A logical scalar, do you want to share the file?}
+\item{.share}{logical, do you want to share the file?}
 
 \item{folder}{A `dribble` object indicating the Drive folder to upload the file to.}
 }
