@@ -3,6 +3,14 @@
 \name{myLflt}
 \alias{myLflt}
 \title{A pleasant leaflet basemap}
+\usage{
+myLflt(tile_opts = tileOptions(), chinatown = FALSE)
+}
+\arguments{
+\item{tile_opts}{list, override arguments to the defaults in \code{\link[tileOptions]{leaflet}}}
+
+\item{chinatown}{logical, whether to use Hing Hay Park as the default \code{\link[setView]{leaflet}}}
+}
 \description{
 A pleasant-looking leaflet basemap to begin a leaflet pipechain with.
 }

@@ -6,18 +6,20 @@
 #' in a PDF document - use \code{myLflyGrey} instead.
 #'
 #' @name myLflt
-#' @import leaflet ggthemes
+#' @param tile_opts list, override arguments to the defaults in \code{\link[tileOptions]{leaflet}}
+#' @param chinatown logical, whether to use Hing Hay Park as the default \code{\link[setView]{leaflet}}
+#' @import leaflet
+#' @import purrr
 #' @export
-NULL
-
-#` @rdname myLflt
-#` @export
-myLflt <- function(){
-        leaflet() %>%
+myLflt <- function(tile_opts = tileOptions(), chinatown = FALSE){
+        l <- leaflet() %>%
                 addTiles(
                         urlTemplate = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
-                        attribution = ''
-                )
+                        attribution = '',
+                        options = list_modify(tileOptions(), !!! tile_opts))
+        if(!chinatown){l}else{l %>% setView(-122.3254, 47.59853, zoom = 15)}
+
+
 }
 
 
