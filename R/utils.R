@@ -1,10 +1,23 @@
-#' A set of generic helpful functions
-#'
-#' General purpose functions to make working in R easier.
-#'
+#' @title A set of generic helpful functions
+#' @description General purpose functions to make working in R easier.
 #' @import dplyr operator.tools
 #' @name utils
+#' @import purrr
 NULL
+
+#' @rdname utils
+#' @export
+maybe_make <- function(fp, expr){
+
+  fun <- function(fp, expr){
+  if(!file.exists(fp)){expr}
+  }
+
+  fun_possibly <- purrr::possibly(.f = fun, otherwise = NULL)
+
+  fun_possibly(fp,expr)
+
+}
 
 #' @rdname utils
 #' @export
