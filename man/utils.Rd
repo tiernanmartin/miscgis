@@ -2,6 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{utils}
 \alias{utils}
+\alias{maybe_make}
 \alias{first_not_na}
 \alias{first_not_null}
 \alias{replace_empty}
@@ -13,6 +14,8 @@
 \alias{label_yr}
 \title{A set of generic helpful functions}
 \usage{
+maybe_make(fp, expr)
+
 first_not_na(x)
 
 first_not_null(x)
