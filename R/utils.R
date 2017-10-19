@@ -7,6 +7,11 @@ NULL
 
 #' @rdname utils
 #' @export
+not_sfc <- function(x) !any(class(x) %in% 'sfc')
+
+
+#' @rdname utils
+#' @export
 maybe_make <- function(fp, expr){
 
   fun <- function(fp, expr){
