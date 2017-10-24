@@ -4,14 +4,16 @@
 \alias{drive_read}
 \title{Read a file from Google Drive.}
 \usage{
-drive_read(dribble, read_fun, .unzip = FALSE, ...)
+drive_read(dr_id, read_fun, .unzip = FALSE, folder_name = NULL, ...)
 }
 \arguments{
-\item{dribble}{a `dribble` object containing the googledrive information.}
+\item{dr_id}{a Google Drive object id (use \code{\link[googledrive]{as_id}}).}
 
 \item{read_fun}{a function to read the object into memory.}
 
 \item{.unzip}{A logical scalar, does the file need to be decompressed?}
+
+\item{folder_name}{If the target is \code{.zip} file, what is the name of the folder within the file.}
 
 \item{...}{Arguments to pass to the `read_fun` function.}
 }
