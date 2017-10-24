@@ -20,7 +20,9 @@ maybe_make <- function(fp, expr){
 
   fun_possibly <- purrr::possibly(.f = fun, otherwise = NULL)
 
-  fun_possibly(fp,expr)
+  result <- fun_possibly(fp,expr)
+
+  invisible(result)
 
 }
 
