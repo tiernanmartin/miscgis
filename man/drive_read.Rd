@@ -2,20 +2,28 @@
 % Please edit documentation in R/drive_read.R
 \name{drive_read}
 \alias{drive_read}
+\alias{drive_read_zip}
 \title{Read a file from Google Drive.}
 \usage{
-drive_read(dr_id, read_fun, .unzip = FALSE, target_name = NULL, ...)
+drive_read(dr_id, .tempfile = TRUE, path = NULL, read_fun, ...)
+
+drive_read_zip(dr_id, .tempdir = TRUE, dir_path = NULL, read_fun,
+  target_name, ...)
 }
 \arguments{
 \item{dr_id}{a Google Drive object id (use \code{\link[googledrive]{as_id}}).}
 
+\item{.tempfile}{logical, Whether to save the file to a tempfile}
+
+\item{path}{The file path to save the file to.}
+
 \item{read_fun}{a function to read the object into memory.}
 
-\item{.unzip}{A logical scalar, does the file need to be decompressed?}
+\item{...}{Arguments to pass to the `read_fun` function.}
+
+\item{.tempdir}{logical, Whether to save the \code{.zip} file to a temp directory}
 
 \item{target_name}{If the target is \code{.zip} file, what is the name of the folder or file within the compressed \code{.zip} file.}
-
-\item{...}{Arguments to pass to the `read_fun` function.}
 }
 \value{
 an object, format depends on which `read_fun` is provided.
