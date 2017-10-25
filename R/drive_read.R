@@ -19,11 +19,11 @@ drive_read <- function (dr_id, .tempfile = TRUE, path = NULL, read_fun, ...)
 
   f <- if(.tempfile){tempfile()}else{path}
 
-  d %>% drive_download(path = f)
+  d %>% drive_download(path = f, overwrite = TRUE)
 
-  result <- read_fun(path, ...)
+  result <- read_fun(f, ...)
 
-  if(.tempfile){file.remove(f)}
+  if(.tempfile){unlink(f, recursive = TRUE)}
 
   invisible(result)
 }
@@ -37,7 +37,7 @@ drive_read_zip <- function (dr_id, .tempdir = TRUE, dir_path = NULL, read_fun, t
 
   f <- tempfile()
 
-  d %>% drive_download(path = f)
+  d %>% drive_download(path = f, overwrite = TRUE)
 
   dir <- if(.tempdir){tempdir()}else{dir_path}
 
@@ -47,8 +47,10 @@ drive_read_zip <- function (dr_id, .tempdir = TRUE, dir_path = NULL, read_fun, t
 
   result <-read_fun(fp, ...)
 
-  if(.tempdir){file.remove(f); file.remove(list.files(dir, recursive = TRUE))}
+  unlink(f, recursive = TRUE);
 
-  invisbile(result)
+  if(.tempdir){unlink(list.files(dir, recursive = TRUE), recursive = TRUE)}
+
+  invisible(result)
 }
 
