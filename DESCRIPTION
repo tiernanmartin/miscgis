@@ -1,7 +1,7 @@
 Package: miscgis
 Type: Package
 Title: A Collection of Functions and RStudio Add-ins for GIS Analysis in R
-Version: 0.1.3-28
+Version: 0.1.3-29
 Author: Tiernan Martin
 Maintainer: Tiernan Martin <tiernan.martin@gmail.com>
 Description: This package holds a number of helper functions and RStudio Add-ins
@@ -33,4 +33,6 @@ Imports:
     acs (>= 2.0),
     rmarkdown (>= 1.3),
     googledrive,
-    plyr
+    plyr,
+    magrittr,
+    stringr

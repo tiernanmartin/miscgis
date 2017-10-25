@@ -21,7 +21,11 @@ drive_read <- function (dr_id, .tempfile = TRUE, path = NULL, read_fun, ...)
 
   d %>% drive_download(path = f)
 
-  read_fun(path, ...)
+  result <- read_fun(path, ...)
+
+  if(.tempfile){file.remove(f)}
+
+  invisible(result)
 }
 
 #' @rdname drive_read
@@ -41,6 +45,10 @@ drive_read_zip <- function (dr_id, .tempdir = TRUE, dir_path = NULL, read_fun, t
 
   fp <- paste(dirname(dir),basename(dir), target_name, sep = "/")
 
-  read_fun(fp, ...)
+  result <-read_fun(fp, ...)
+
+  if(.tempdir){file.remove(f); file.remove(list.files(dir, recursive = TRUE))}
+
+  invisbile(result)
 }
 
