@@ -12,22 +12,6 @@ not_sfc <- function(x) !any(class(x) %in% 'sfc')
 
 #' @rdname utils
 #' @export
-maybe_make <- function(fp, expr){
-
-  fun <- function(fp, expr){
-  if(!file.exists(fp)){expr}
-  }
-
-  fun_possibly <- purrr::possibly(.f = fun, otherwise = NULL)
-
-  result <- fun_possibly(fp,expr)
-
-  invisible(result)
-
-}
-
-#' @rdname utils
-#' @export
 first_not_na <- function(x){
         if(all(sapply(x,is.na))){
                 as(NA,class(x))
