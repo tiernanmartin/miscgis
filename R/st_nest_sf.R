@@ -8,6 +8,7 @@
 #' @import purrr
 #' @import dplyr
 #' @import tidyr
+#' @import stringr
 #' @examples
 #'
 #' library(sf)
@@ -19,14 +20,25 @@
 #' @export
 st_nest_sf <- function(x){
 
-  x %>%
-    rename_if(.predicate = function(x) any(class(x) %in% 'sfc'), ~ 'geometry') %>%
-    rownames_to_column('ROW') %>%
-    nest(-ROW) %>%
-    select(-ROW) %>%
-    mutate(geometry = map(data, "geometry") %>% flatten %>% st_sfc,
-           data = map(data, miscgis::st_drop_geometry)) %>%
-    st_sf %>%
-    st_set_crs(st_crs(x))
+        crs <- st_crs(x)
+
+        type <- st_geometry_type(x) %>%
+                unique %>%
+                as.character %>%
+                keep(~ str_detect(.x, 'MULTI'))
+
+
+        x %>%
+                rename_if(.predicate = function(x) any(class(x) %in% 'sfc'), ~ 'geometry') %>%
+                rownames_to_column('ROW') %>%
+                nest(-ROW) %>%
+                select(-ROW) %>%
+                mutate(geometry = map(data, "geometry") %>% flatten %>% st_sfc,
+                       data = map(data, miscgis::st_drop_geometry)) %>%
+                st_sf %>%
+                st_set_crs(crs) %>%
+                st_cast(type) %>%
+                as_tibble %>%
+                st_as_sf
 }
 
