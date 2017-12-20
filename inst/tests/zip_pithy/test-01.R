@@ -1,6 +1,6 @@
-fp <- paste(getwd(),"inst/tests/zip_pithy/mtcars.csv",sep = "/")
+fp <- paste(getwd(),"zip_pithy/mtcars.csv",sep = "/")
 
-zip_fp <- paste(getwd(),"inst/tests/zip_pithy/mtcars.zip",sep = "/")
+zip_fp <- paste(getwd(),"zip_pithy/mtcars.zip",sep = "/")
 
 write.csv(mtcars, fp)
 
