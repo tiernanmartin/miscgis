@@ -7,14 +7,21 @@
 #' @param compression_level A number between 1 and 9. 9 compresses best, but it also takes the longest.
 #' @return The name of the created zip file, invisibly.
 #' @import zip
+#' @import purrr
 #' @export
 zip_pithy <- function(zipfile, files, recurse = TRUE, compression_level = 9){
+
+        if(!dir.exists(dirname(zipfile))){stop("The zipfile filepath is invalid (it doesn't exist).")}
 
         old_wd <- getwd()
 
         setwd(dirname(zipfile))
 
-        zip(zipfile, files, recurse, compression_level)
+        zip_fp <- basename(zipfile)
+
+        files_fp <- map_chr(files, basename)
+
+        zip(zip_fp, files_fp, recurse, compression_level)
 
         setwd(old_wd)
 }
