@@ -1,7 +1,7 @@
 Package: miscgis
 Type: Package
 Title: A Collection of Functions and RStudio Add-ins for GIS Analysis in R
-Version: 0.1.3-35
+Version: 0.1.3-36
 Author: Tiernan Martin
 Maintainer: Tiernan Martin <tiernan.martin@gmail.com>
 Description: This package holds a number of helper functions and RStudio Add-ins
@@ -18,6 +18,7 @@ Imports:
     leaflet.extras (>= 0.1.9008),
     dplyr (>= 0.5.0),
     purrr (>= 0.2.4.9000),
+    glue,
     sp (>= 1.2-3),
     tigris (>= 0.3.3),
     miniUI (>= 0.1.1),
