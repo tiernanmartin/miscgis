@@ -26,14 +26,23 @@ make_or_read2 <- function(fp = NA_character_, dr_id = NA_character_, get_expr = 
                         NULL
                 }else if(dr_id_exists){
                                 message(glue("The Drive file with id '{as_id(dr_id)}' already exists."))
-                        }else{get_expr}
+                }else{
+                        message(glue("The Drive file with id '{as_id(dr_id)}' does not exist - executing the `get_expr()` function."))
+                                get_expr
+                        }
         }
 
         get_fun(dr_id, get_expr)
 
 
         fun <- function(fp, make_expr, read_expr){
-                if(!file.exists(fp)){make_expr}else{read_expr}
+                if(!file.exists(fp)){
+                        message(glue("Downloading and loading Drive file with id '{as_id(dr_id)}'."))
+                        make_expr
+                }else{
+                        message(glue("Reading local file: '{fp}'."))
+                                read_expr
+                        }
         }
 
         result <- fun(fp, make_expr, read_expr)
