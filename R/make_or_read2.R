@@ -22,7 +22,7 @@ make_or_read2 <- function (fp = NA_character_, dr_id = "", skip_get_expr = FALSE
   dr_id_error <- safe_as_dribble(dr_id) %>% pluck("result") %>%
     is_null()
 
-  get_fun <- function(dr_id, get_expr) {
+  get_fun <- function(fp, dr_id, get_expr) {
 
     if (dr_id_error) {
       message(glue("The Drive file with id '{as_id(dr_id)}' does not exist - executing the `get_expr()` function."))
