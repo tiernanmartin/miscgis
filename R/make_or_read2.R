@@ -54,7 +54,7 @@ make_or_read2 <- function (fp = NA_character_, dr_id = "", skip_get_expr = FALSE
     result <- fun(fp, dr_id, make_expr, read_expr)
     return(result)
   }else{
-    new_dribble <- get_fun(dr_id, get_expr)
+    new_dribble <- get_fun(fp, dr_id, get_expr)
     new_dr_id <- as_id(new_dribble)
 
     result <- fun(fp, dr_id = new_dr_id, make_expr, read_expr)
