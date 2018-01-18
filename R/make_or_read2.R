@@ -19,16 +19,14 @@ make_or_read2 <- function (fp = NA_character_, dr_id = "", skip_get_expr = FALSE
 
   # browser()
     safe_as_dribble <- safely(as_dribble)
+
+    dr_id_null <- is.null(dr_id)
+
     dr_id_error <- safe_as_dribble(dr_id) %>% pluck("result") %>%
         is_null()
+
     get_fun <- function(fp, dr_id, get_expr) {
-        if (dr_id_error) {
-            message(glue("The Drive file with id '{as_id(dr_id)}' does not exist - executing the `get_expr()` function."))
-            get_expr(fp)
-        }
-        else {
-            message(glue("The Drive file with id '{as_id(dr_id)}' already exists - skipping execution of the get_expr()` function."))
-        }
+        get_expr(fp)
     }
     fun <- function(fp, dr_id, make_expr, read_expr) {
         if (!file.exists(fp)) {
@@ -40,13 +38,13 @@ make_or_read2 <- function (fp = NA_character_, dr_id = "", skip_get_expr = FALSE
             read_expr(fp)
         }
     }
-    if (is.null(dr_id)) {
+    if (dr_id_null) {
         stop("`dr_id` cannot be `NULL`.")
     }
-    if (dr_id_error & skip_get_expr) {
+    else if (dr_id_error & skip_get_expr) {
         stop("`skip_get = TRUE` but `as_dribble(dr_id)` returns an error.\nProvide a valid `dr_id` or set `skip_get = FALSE`.")
     }
-    else if (skip_get_expr) {
+    else if (skip_get_expr | (!dr_id_error)) {
         result <- fun(fp, dr_id, make_expr, read_expr)
         return(result)
     }
