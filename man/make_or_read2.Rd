@@ -4,19 +4,21 @@
 \alias{make_or_read2}
 \title{If a Drive file doesn't exist, get it}
 \usage{
-make_or_read2(fp = NA_character_, dr_id = NA_character_, get_expr = NULL,
-  make_expr = NULL, read_expr = NULL)
+make_or_read2(fp = NA_character_, dr_id = "", skip_get_expr = FALSE,
+  get_expr = NULL, make_expr = NULL, read_expr = NULL)
 }
 \arguments{
-\item{fp}{filepath}
+\item{fp}{A file path character string.}
 
-\item{dr_id}{a Google Drive ID, S3 class \code{drive_id} (use \code{\link[googledrive]{as_id}}).}
+\item{dr_id}{A Google Drive ID, S3 class \code{drive_id} (use \code{\link[googledrive]{as_id}}).}
 
-\item{get_expr}{expression used to get the file from its original source}
+\item{skip_get_expr}{Skip the \code{get_expr} step (default is \code{FALSE}).}
 
-\item{make_expr}{expression used to create the file}
+\item{get_expr}{An expression used to get the file from its original source.}
 
-\item{read_expr}{expression used to read the file}
+\item{make_expr}{An expression used to create the file.}
+
+\item{read_expr}{An expression used to read the file.}
 }
 \value{
 The object that is read or created is returned silently.
