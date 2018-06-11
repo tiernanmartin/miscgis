@@ -6,13 +6,14 @@
 #' @param get_expr expression used to get the file from its original source
 #' @param make_expr expression used to create the file
 #' @param read_expr expression used to read the file
+#' @param ... other objects to pass to the expressions
 #' @return The object that is read or created is returned silently.
 #' @import purrr
 #' @import googledrive
 #' @import magrittr
 #' @import glue
 #' @export
-make_or_read2 <- function(fp = NA_character_, dr_id = NA_character_, get_expr = NULL, make_expr = NULL, read_expr = NULL){
+make_or_read2 <- function(fp = NA_character_, dr_id = NA_character_, get_expr = NULL, make_expr = NULL, read_expr = NULL, ...){
 
         safe_as_dribble <- safely(as_dribble)
 

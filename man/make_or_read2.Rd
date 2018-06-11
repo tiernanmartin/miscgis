@@ -5,7 +5,7 @@
 \title{If a Drive file doesn't exist, get it}
 \usage{
 make_or_read2(fp = NA_character_, dr_id = NA_character_, get_expr = NULL,
-  make_expr = NULL, read_expr = NULL)
+  make_expr = NULL, read_expr = NULL, ...)
 }
 \arguments{
 \item{fp}{filepath}
@@ -17,6 +17,8 @@ make_or_read2(fp = NA_character_, dr_id = NA_character_, get_expr = NULL,
 \item{make_expr}{expression used to create the file}
 
 \item{read_expr}{expression used to read the file}
+
+\item{...}{other objects to pass to the expressions}
 }
 \value{
 The object that is read or created is returned silently.
